@@ -24,8 +24,10 @@ class MyApp extends StatelessWidget {
         fontFamily: 'SF Pro Display',
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
+        splashColor: Colors.transparent,
+        highlightColor: Colors.transparent,
       ),
-      home: const LeaderBoard1(),
+      home: const LeaderBoard2(),
     );
   }
 }
