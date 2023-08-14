@@ -2,6 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:swimwarrior/screens/LeaderBoard_1.dart';
+import 'package:swimwarrior/screens/LeaderBoard_2.dart';
 import 'package:swimwarrior/screens/creds.dart';
 import 'package:swimwarrior/screens/phone_number.dart';
 import 'package:swimwarrior/screens/signup.dart';
