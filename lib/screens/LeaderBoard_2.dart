@@ -1,10 +1,16 @@
 import 'package:flutter/material.dart';
-
+import 'package:swimwarrior/widgets/gender.dart';
+import 'package:swimwarrior/widgets/range_slider.dart';
 import '../utils/colors.dart';
 
-class LeaderBoard2 extends StatelessWidget {
+class LeaderBoard2 extends StatefulWidget {
   const LeaderBoard2({super.key});
 
+  @override
+  State<LeaderBoard2> createState() => _LeaderBoard2State();
+}
+
+class _LeaderBoard2State extends State<LeaderBoard2> {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
@@ -75,6 +81,27 @@ class LeaderBoard2 extends StatelessWidget {
                             fontFamily: 'SF Pro Display'),
                       ),
                     ),
+                    const SizedBox(
+                      height: 10,
+                    ),
+                    const MyRangeSlider(),
+                    const SizedBox(height: 35),
+                    const Align(
+                      alignment: Alignment.centerLeft,
+                      child: Text(
+                        'Gender',
+                        textAlign: TextAlign.left,
+                        style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 18,
+                            fontWeight: FontWeight.w500,
+                            fontFamily: 'SF Pro Display'),
+                      ),
+                    ),
+                    const SizedBox(
+                      height: 10,
+                    ),
+                    const MyGender()
                   ],
                 ),
               ),

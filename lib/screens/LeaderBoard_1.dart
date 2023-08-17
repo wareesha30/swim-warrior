@@ -1,3 +1,5 @@
+// ignore: file_names
+// ignore: file_names
 import 'package:flutter/material.dart';
 import 'package:swimwarrior/utils/colors.dart';
 import 'package:swimwarrior/widgets/bottom_nav.dart';

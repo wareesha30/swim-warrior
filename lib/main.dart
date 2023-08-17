@@ -7,6 +7,7 @@ import 'package:swimwarrior/screens/creds.dart';
 import 'package:swimwarrior/screens/phone_number.dart';
 import 'package:swimwarrior/screens/signup.dart';
 import 'package:swimwarrior/screens/verification.dart';
+import 'package:swimwarrior/utils/colors.dart';
 
 void main() {
   runApp(const MyApp());
@@ -22,6 +23,10 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Swim Warrior',
       theme: ThemeData(
+        sliderTheme: SliderThemeData(
+          activeTickMarkColor: blue,
+          inactiveTickMarkColor: Colors.transparent,
+        ),
         fontFamily: 'SF Pro Display',
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
