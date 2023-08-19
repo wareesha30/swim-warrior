@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:swimwarrior/widgets/gender.dart';
+import 'package:swimwarrior/widgets/gender_button.dart';
+import 'package:swimwarrior/widgets/level_checkbox.dart';
 import 'package:swimwarrior/widgets/range_slider.dart';
 import '../utils/colors.dart';
 
@@ -82,7 +83,7 @@ class _LeaderBoard2State extends State<LeaderBoard2> {
                       ),
                     ),
                     const SizedBox(
-                      height: 10,
+                      height: 16,
                     ),
                     const MyRangeSlider(),
                     const SizedBox(height: 35),
@@ -99,9 +100,28 @@ class _LeaderBoard2State extends State<LeaderBoard2> {
                       ),
                     ),
                     const SizedBox(
-                      height: 10,
+                      height: 16,
                     ),
-                    const MyGender()
+                    const GenderButton(),
+                    const SizedBox(
+                      height: 40,
+                    ),
+                    const Align(
+                      alignment: Alignment.centerLeft,
+                      child: Text(
+                        'Level',
+                        textAlign: TextAlign.left,
+                        style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 18,
+                            fontWeight: FontWeight.w500,
+                            fontFamily: 'SF Pro Display'),
+                      ),
+                    ),
+                    const SizedBox(
+                      height: 16,
+                    ),
+                    const LevelCheckbox(),
                   ],
                 ),
               ),
