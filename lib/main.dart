@@ -11,7 +11,6 @@ import 'package:swimwarrior/screens/verification.dart';
 import 'package:swimwarrior/utils/colors.dart';
 
 void main() {
-  //debugPaintSizeEnabled = true;
   runApp(const MyApp());
 }
 
