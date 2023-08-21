@@ -1,6 +1,7 @@
 // ignore_for_file: unused_import
 
 import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart';
 import 'package:swimwarrior/screens/LeaderBoard_1.dart';
 import 'package:swimwarrior/screens/LeaderBoard_2.dart';
 import 'package:swimwarrior/screens/creds.dart';
@@ -10,6 +11,7 @@ import 'package:swimwarrior/screens/verification.dart';
 import 'package:swimwarrior/utils/colors.dart';
 
 void main() {
+  debugPaintSizeEnabled = true;
   runApp(const MyApp());
 }
 

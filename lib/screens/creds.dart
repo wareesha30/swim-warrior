@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:swimwarrior/utils/colors.dart';
 import 'package:swimwarrior/widgets/creds_signin.dart';
 import 'package:swimwarrior/widgets/email.dart';
 import 'package:swimwarrior/widgets/password.dart';
@@ -49,7 +50,11 @@ class Creds extends StatelessWidget {
                       const SizedBox(
                         height: 144,
                       ),
-                      const CredsSignin(),
+                      CredsSignin(
+                        text: 'Sign in',
+                        color: blue,
+                        bgcolor: Colors.white,
+                      ),
                       const SizedBox(
                         height: 58,
                       )

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:swimwarrior/widgets/creds_signin.dart';
 import 'package:swimwarrior/widgets/gender_button.dart';
 import 'package:swimwarrior/widgets/level_checkbox.dart';
 import 'package:swimwarrior/widgets/range_slider.dart';
@@ -122,6 +123,13 @@ class _LeaderBoard2State extends State<LeaderBoard2> {
                       height: 16,
                     ),
                     const LevelCheckbox(),
+                    const SizedBox(
+                      height: 30,
+                    ),
+                    CredsSignin(
+                        text: 'Apply filter',
+                        color: Colors.white,
+                        bgcolor: blue)
                   ],
                 ),
               ),
