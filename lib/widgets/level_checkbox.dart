@@ -23,16 +23,16 @@ class _LevelCheckboxState extends State<LevelCheckbox> {
     return Row(
       children: [
         Expanded(
-          child: Wrap(
-            spacing: 2,
-            runSpacing: 1,
+          child: Column(
             children: [
               CheckboxListTile(
                 activeColor: blue,
                 contentPadding: EdgeInsets.zero,
+                dense: true,
+                visualDensity: VisualDensity.compact,
                 title: const Text(
                   "Copper",
-                  style: TextStyle(color: Colors.white),
+                  style: TextStyle(color: Colors.white, fontSize: 14),
                 ),
                 value: copperVal,
                 onChanged: (newValue) {
@@ -45,9 +45,11 @@ class _LevelCheckboxState extends State<LevelCheckbox> {
               CheckboxListTile(
                 activeColor: blue,
                 contentPadding: EdgeInsets.zero,
+                dense: true,
+                visualDensity: VisualDensity.compact,
                 title: const Text(
                   "Silver",
-                  style: TextStyle(color: Colors.white),
+                  style: TextStyle(color: Colors.white, fontSize: 14),
                 ),
                 value: silverVal,
                 onChanged: (newValue) {
@@ -60,9 +62,11 @@ class _LevelCheckboxState extends State<LevelCheckbox> {
               CheckboxListTile(
                 activeColor: blue,
                 contentPadding: EdgeInsets.zero,
+                dense: true,
+                visualDensity: VisualDensity.compact,
                 title: const Text(
                   "Platinum",
-                  style: TextStyle(color: Colors.white),
+                  style: TextStyle(color: Colors.white, fontSize: 14),
                 ),
                 value: platinumVal,
                 onChanged: (newValue) {
@@ -75,9 +79,11 @@ class _LevelCheckboxState extends State<LevelCheckbox> {
               CheckboxListTile(
                 activeColor: blue,
                 contentPadding: EdgeInsets.zero,
+                dense: true,
+                visualDensity: VisualDensity.compact,
                 title: const Text(
                   "Challenger",
-                  style: TextStyle(color: Colors.white),
+                  style: TextStyle(color: Colors.white, fontSize: 14),
                 ),
                 value: challengerVal,
                 onChanged: (newValue) {
@@ -99,9 +105,11 @@ class _LevelCheckboxState extends State<LevelCheckbox> {
               CheckboxListTile(
                 activeColor: blue,
                 contentPadding: EdgeInsets.zero,
+                dense: true,
+                visualDensity: VisualDensity.compact,
                 title: const Text(
                   "Bronze",
-                  style: TextStyle(color: Colors.white),
+                  style: TextStyle(color: Colors.white, fontSize: 14),
                 ),
                 value: bronzeVal,
                 onChanged: (newValue) {
@@ -114,9 +122,11 @@ class _LevelCheckboxState extends State<LevelCheckbox> {
               CheckboxListTile(
                 activeColor: blue,
                 contentPadding: EdgeInsets.zero,
+                dense: true,
+                visualDensity: VisualDensity.compact,
                 title: const Text(
                   "Gold",
-                  style: TextStyle(color: Colors.white),
+                  style: TextStyle(color: Colors.white, fontSize: 14),
                 ),
                 value: goldVal,
                 onChanged: (newValue) {
@@ -129,9 +139,11 @@ class _LevelCheckboxState extends State<LevelCheckbox> {
               CheckboxListTile(
                 activeColor: blue,
                 contentPadding: EdgeInsets.zero,
+                dense: true,
+                visualDensity: VisualDensity.compact,
                 title: const Text(
                   "Diamond",
-                  style: TextStyle(color: Colors.white),
+                  style: TextStyle(color: Colors.white, fontSize: 14),
                 ),
                 value: diamondVal,
                 onChanged: (newValue) {
@@ -144,9 +156,11 @@ class _LevelCheckboxState extends State<LevelCheckbox> {
               CheckboxListTile(
                 activeColor: blue,
                 contentPadding: EdgeInsets.zero,
+                dense: true,
+                visualDensity: VisualDensity.compact,
                 title: const Text(
                   "Master",
-                  style: TextStyle(color: Colors.white),
+                  style: TextStyle(color: Colors.white, fontSize: 14),
                 ),
                 value: masterVal,
                 onChanged: (newValue) {

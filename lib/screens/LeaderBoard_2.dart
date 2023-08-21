@@ -24,16 +24,17 @@ class _LeaderBoard2State extends State<LeaderBoard2> {
             Container(
               color: blue,
             ),
-            const Positioned(
-                top: 37,
-                bottom: 746,
-                left: 122,
-                right: 122,
-                child: Text(
-                  'Leaderboard',
-                  style: TextStyle(color: Colors.white, fontSize: 24),
-                  textAlign: TextAlign.center,
-                )),
+            const Positioned.fill(
+              top: 37,
+              // bottom: 746,
+              // left: 122,
+              // right: 122,
+              child: Text(
+                'Leaderboard',
+                style: TextStyle(color: Colors.white, fontSize: 24),
+                textAlign: TextAlign.center,
+              ),
+            ),
             Positioned(
               top: 104,
               bottom: 0,
@@ -41,7 +42,7 @@ class _LeaderBoard2State extends State<LeaderBoard2> {
               left: 0,
               child: Container(
                 padding:
-                    const EdgeInsets.symmetric(horizontal: 44, vertical: 40),
+                    const EdgeInsets.symmetric(horizontal: 30, vertical: 40),
                 decoration: const ShapeDecoration(
                     color: Colors.black,
                     shape: RoundedRectangleBorder(
@@ -50,87 +51,101 @@ class _LeaderBoard2State extends State<LeaderBoard2> {
                         topRight: Radius.circular(50.0),
                       ),
                     )),
-                child: Column(
-                  children: [
-                    Row(
-                      children: [
-                        Image.asset('assets/images/cross.png'),
-                        const SizedBox(
-                          width: 100,
+                child: SingleChildScrollView(
+                  child: Column(
+                    children: [
+                      Row(
+                        children: [
+                          Image.asset('assets/images/cross.png'),
+                          const SizedBox(
+                            width: 100,
+                          ),
+                          const Text(
+                            'Filter',
+                            style: TextStyle(
+                                color: Colors.white,
+                                fontFamily: 'SF Pro Display',
+                                fontSize: 24,
+                                fontWeight: FontWeight.w500),
+                          )
+                        ],
+                      ),
+                      const SizedBox(
+                        height: 35,
+                      ),
+                      const Align(
+                        alignment: Alignment.centerLeft,
+                        child: Text(
+                          'Age',
+                          textAlign: TextAlign.left,
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 18,
+                            fontWeight: FontWeight.w500,
+                            fontFamily: 'SF Pro Display',
+                          ),
                         ),
-                        const Text(
-                          'Filter',
+                      ),
+                      const SizedBox(
+                        height: 16,
+                      ),
+                      const MyRangeSlider(),
+                      const SizedBox(height: 35),
+                      const Align(
+                        alignment: Alignment.centerLeft,
+                        child: Text(
+                          'Gender',
+                          textAlign: TextAlign.left,
                           style: TextStyle(
                               color: Colors.white,
-                              fontFamily: 'SF Pro Display',
-                              fontSize: 24,
-                              fontWeight: FontWeight.w500),
-                        )
-                      ],
-                    ),
-                    const SizedBox(
-                      height: 35,
-                    ),
-                    const Align(
-                      alignment: Alignment.centerLeft,
-                      child: Text(
-                        'Age',
-                        textAlign: TextAlign.left,
-                        style: TextStyle(
+                              fontSize: 18,
+                              fontWeight: FontWeight.w500,
+                              fontFamily: 'SF Pro Display'),
+                        ),
+                      ),
+                      const SizedBox(
+                        height: 16,
+                      ),
+                      const GenderButton(),
+                      const SizedBox(
+                        height: 40,
+                      ),
+                      const Align(
+                        alignment: Alignment.centerLeft,
+                        child: Text(
+                          'Level',
+                          textAlign: TextAlign.left,
+                          style: TextStyle(
                             color: Colors.white,
                             fontSize: 18,
                             fontWeight: FontWeight.w500,
-                            fontFamily: 'SF Pro Display'),
+                            fontFamily: 'SF Pro Display',
+                          ),
+                        ),
                       ),
-                    ),
-                    const SizedBox(
-                      height: 16,
-                    ),
-                    const MyRangeSlider(),
-                    const SizedBox(height: 35),
-                    const Align(
-                      alignment: Alignment.centerLeft,
-                      child: Text(
-                        'Gender',
-                        textAlign: TextAlign.left,
-                        style: TextStyle(
-                            color: Colors.white,
-                            fontSize: 18,
-                            fontWeight: FontWeight.w500,
-                            fontFamily: 'SF Pro Display'),
+                      const SizedBox(
+                        height: 16,
                       ),
-                    ),
-                    const SizedBox(
-                      height: 16,
-                    ),
-                    const GenderButton(),
-                    const SizedBox(
-                      height: 40,
-                    ),
-                    const Align(
-                      alignment: Alignment.centerLeft,
-                      child: Text(
-                        'Level',
-                        textAlign: TextAlign.left,
-                        style: TextStyle(
-                            color: Colors.white,
-                            fontSize: 18,
-                            fontWeight: FontWeight.w500,
-                            fontFamily: 'SF Pro Display'),
+                      const LevelCheckbox(),
+                      const SizedBox(
+                        height: 30,
                       ),
-                    ),
-                    const SizedBox(
-                      height: 16,
-                    ),
-                    const LevelCheckbox(),
-                    const SizedBox(
-                      height: 30,
-                    ),
-                    CredsSignin(
+                      CredsSignin(
                         text: 'Apply filter',
                         color: Colors.white,
-                        bgcolor: blue)
-                  ],
+                        bgcolor: blue,
+                        arrowColor: Colors.white,
+                        height: 50,
+                      ),
+                      CredsSignin(
+                        text: 'Apply filter',
+                        color: Colors.white,
+                        bgcolor: blue,
+                        arrowColor: Colors.white,
+                        height: 50,
+                      ),
+                    ],
+                  ),
                 ),
               ),
             ),
