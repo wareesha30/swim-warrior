@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:swimwarrior/utils/colors.dart';
 import 'package:swimwarrior/widgets/verification_code.dart';
-import '../widgets/creds_signin.dart';
+import '../widgets/creds_signin_button.dart';
 
 class Verification extends StatelessWidget {
   const Verification({super.key});

@@ -22,9 +22,13 @@ class MyBottomNavBar extends StatelessWidget {
         unselectedLabelStyle: const TextStyle(color: Colors.black),
         items: [
           BottomNavigationBarItem(
-              backgroundColor: Colors.white,
-              icon: Image.asset('assets/images/crown.png'),
-              label: 'Leaderboard'),
+            backgroundColor: Colors.white,
+            icon: Image.asset(
+              'assets/images/crown.png',
+              color: blue,
+            ),
+            label: 'Leaderboard',
+          ),
           BottomNavigationBarItem(
               backgroundColor: Colors.white,
               icon: Image.asset('assets/images/Stopwatch.png'),

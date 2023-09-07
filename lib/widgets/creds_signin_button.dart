@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+//import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:swimwarrior/utils/colors.dart';
 
 class CredsSignin extends StatelessWidget {
@@ -7,6 +8,8 @@ class CredsSignin extends StatelessWidget {
   final Color bgcolor;
   final Color? arrowColor;
   final double? height;
+  final bool? showArrow;
+
   const CredsSignin({
     super.key,
     required this.text,
@@ -14,6 +17,7 @@ class CredsSignin extends StatelessWidget {
     required this.bgcolor,
     this.arrowColor,
     this.height,
+    this.showArrow,
   });
 
   @override
@@ -25,16 +29,17 @@ class CredsSignin extends StatelessWidget {
       decoration: BoxDecoration(
           color: bgcolor, borderRadius: BorderRadius.circular(50)),
       child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        mainAxisAlignment: showArrow ?? true
+            ? MainAxisAlignment.spaceBetween
+            : MainAxisAlignment.center,
         children: [
           Text(
             text,
             style: TextStyle(fontSize: 25, color: color),
           ),
-          const SizedBox(
-            width: 15,
-          ),
-          Icon(Icons.arrow_forward, color: arrowColor ?? blue),
+          showArrow ?? true
+              ? Icon(Icons.arrow_forward, color: arrowColor ?? blue)
+              : const SizedBox(),
         ],
       ),
     );

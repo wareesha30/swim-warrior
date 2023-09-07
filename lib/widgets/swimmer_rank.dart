@@ -4,11 +4,15 @@ class SwimmerRank extends StatelessWidget {
   final String suffix;
   final String prefix;
   final String main;
+  final bool? changeIcon;
+  final Image? icon;
   const SwimmerRank(
       {super.key,
       required this.suffix,
       required this.prefix,
-      required this.main});
+      required this.main,
+      this.changeIcon,
+      this.icon});
 
   @override
   Widget build(BuildContext context) {
@@ -25,9 +29,11 @@ class SwimmerRank extends StatelessWidget {
         const SizedBox(
           width: 12,
         ),
-        Image.asset(
-          'assets/images/Unranked_total_Score.png',
-        ),
+        changeIcon ?? true
+            ? Image.asset(
+                'assets/images/Unranked_total_Score.png',
+              )
+            : icon!,
         const SizedBox(
           width: 12,
         ),

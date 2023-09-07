@@ -3,8 +3,8 @@ import 'package:swimwarrior/utils/colors.dart';
 import 'package:swimwarrior/widgets/bottom_nav.dart';
 import 'package:swimwarrior/widgets/swimmer_rank.dart';
 
-class LeaderBoard1 extends StatelessWidget {
-  const LeaderBoard1({super.key});
+class Leaderboard5 extends StatelessWidget {
+  const Leaderboard5({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -17,8 +17,8 @@ class LeaderBoard1 extends StatelessWidget {
             Container(
               color: blue,
             ),
-            const Positioned(
-                top: 37,
+            const Positioned.fill(
+                top: 40,
                 child: Text(
                   'Leaderboard',
                   style: TextStyle(color: Colors.white, fontSize: 24),
@@ -39,9 +39,9 @@ class LeaderBoard1 extends StatelessWidget {
                       topRight: Radius.circular(50.0),
                     ),
                   ),
-                  child: const Column(
+                  child: Column(
                     children: [
-                      Row(
+                      const Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
                           Text(
@@ -73,10 +73,10 @@ class LeaderBoard1 extends StatelessWidget {
                           ),
                         ],
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 32,
                       ),
-                      TextField(
+                      const TextField(
                         decoration: InputDecoration(
                             prefixIcon: Icon(Icons.search),
                             suffixIcon: Icon(Icons.filter_list),
@@ -89,39 +89,63 @@ class LeaderBoard1 extends StatelessWidget {
                               fontWeight: FontWeight.w400,
                             )),
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 34,
                       ),
                       SwimmerRank(
+                        changeIcon: false,
+                        icon: Image.asset(
+                          'assets/images/bronze.png',
+                          width: 40,
+                          height: 40,
+                        ),
                         prefix: '1',
                         main: 'Andre Tacuyan',
                         suffix: '0',
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 28,
                       ),
                       SwimmerRank(
+                        changeIcon: false,
+                        icon: Image.asset(
+                          'assets/images/Total_score.png',
+                          width: 40,
+                          height: 40,
+                        ),
                         prefix: '2',
                         main: 'Lauren Higgs',
                         suffix: '0',
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 28,
                       ),
                       SwimmerRank(
+                        changeIcon: false,
+                        icon: Image.asset(
+                          'assets/images/Copper_1.png',
+                          width: 40,
+                          height: 40,
+                        ),
                         prefix: '3',
                         main: 'Matt Smith',
                         suffix: '0',
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 28,
                       ),
                       SwimmerRank(
+                        changeIcon: false,
+                        icon: Image.asset(
+                          'assets/images/Copper_1.png',
+                          width: 40,
+                          height: 40,
+                        ),
                         prefix: '4',
                         main: 'Thomas Meek',
                         suffix: '0',
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 221,
                       ),
                     ],

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:swimwarrior/widgets/Signin_Button.dart';
+import 'package:swimwarrior/widgets/signin_button.dart';
 
 class SignUp extends StatelessWidget {
   const SignUp({super.key});

@@ -3,10 +3,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:swimwarrior/screens/LeaderBoard_1.dart';
-import 'package:swimwarrior/screens/LeaderBoard_2.dart';
+import 'package:swimwarrior/screens/leaderboard_2.dart';
 import 'package:swimwarrior/screens/creds.dart';
+import 'package:swimwarrior/screens/leaderboard_3.dart';
+import 'package:swimwarrior/screens/leaderboard_4.dart';
+import 'package:swimwarrior/screens/leaderboard_5.dart';
 import 'package:swimwarrior/screens/phone_number.dart';
 import 'package:swimwarrior/screens/signup.dart';
+import 'package:swimwarrior/screens/swimmerstroke_empty.dart';
 import 'package:swimwarrior/screens/verification.dart';
 import 'package:swimwarrior/utils/colors.dart';
 
@@ -17,7 +21,6 @@ void main() {
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -34,7 +37,7 @@ class MyApp extends StatelessWidget {
         splashColor: Colors.transparent,
         highlightColor: Colors.transparent,
       ),
-      home: const LeaderBoard2(),
+      home: const Leaderboard4(),
     );
   }
 }

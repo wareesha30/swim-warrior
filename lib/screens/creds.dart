@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:swimwarrior/utils/colors.dart';
-import 'package:swimwarrior/widgets/creds_signin.dart';
+import 'package:swimwarrior/widgets/creds_signin_button.dart';
 import 'package:swimwarrior/widgets/email.dart';
 import 'package:swimwarrior/widgets/password.dart';
 
