@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:swimwarrior/screens/swimmer_profile.dart';
 import 'package:swimwarrior/utils/colors.dart';
 import 'package:swimwarrior/widgets/bottom_nav.dart';
 import 'package:swimwarrior/widgets/swimmer_rank.dart';
 
-class Leaderboard5 extends StatelessWidget {
-  const Leaderboard5({super.key});
+class Leaderboard6 extends StatelessWidget {
+  const Leaderboard6({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -92,16 +93,24 @@ class Leaderboard5 extends StatelessWidget {
                       const SizedBox(
                         height: 34,
                       ),
-                      SwimmerRank(
-                        changeIcon: false,
-                        icon: Image.asset(
-                          'assets/images/bronze.png',
-                          width: 40,
-                          height: 40,
+                      InkWell(
+                        onTap: () => {
+                          Navigator.push(context,
+                              MaterialPageRoute(builder: (context) {
+                            return const SwimmerProfile();
+                          }))
+                        },
+                        child: SwimmerRank(
+                          changeIcon: false,
+                          icon: Image.asset(
+                            'assets/images/bronze.png',
+                            width: 40,
+                            height: 40,
+                          ),
+                          prefix: '1',
+                          main: 'Andre Tacuyan',
+                          suffix: '0',
                         ),
-                        prefix: '1',
-                        main: 'Andre Tacuyan',
-                        suffix: '0',
                       ),
                       const SizedBox(
                         height: 28,

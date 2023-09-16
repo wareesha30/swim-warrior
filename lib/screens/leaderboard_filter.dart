@@ -1,18 +1,19 @@
 import 'package:flutter/material.dart';
+import 'package:swimwarrior/screens/leaderboard_filteron.dart';
 import 'package:swimwarrior/widgets/creds_signin_button.dart';
 import 'package:swimwarrior/widgets/gender_button.dart';
 import 'package:swimwarrior/widgets/level_checkbox.dart';
 import 'package:swimwarrior/widgets/range_slider.dart';
 import '../utils/colors.dart';
 
-class LeaderBoard2 extends StatefulWidget {
-  const LeaderBoard2({super.key});
+class LeaderBoardFilter extends StatefulWidget {
+  const LeaderBoardFilter({super.key});
 
   @override
-  State<LeaderBoard2> createState() => _LeaderBoard2State();
+  State<LeaderBoardFilter> createState() => _LeaderBoard2State();
 }
 
-class _LeaderBoard2State extends State<LeaderBoard2> {
+class _LeaderBoard2State extends State<LeaderBoardFilter> {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
@@ -127,22 +128,30 @@ class _LeaderBoard2State extends State<LeaderBoard2> {
                       const SizedBox(
                         height: 30,
                       ),
-                      CredsSignin(
-                        text: 'Apply filter',
-                        color: Colors.white,
-                        bgcolor: blue,
-                        arrowColor: Colors.white,
-                        height: 40,
+                      InkWell(
+                        onTap: () => {
+                          Navigator.push(context,
+                              MaterialPageRoute(builder: (context) {
+                            return const LeaderBoardFilterOn();
+                          }))
+                        },
+                        child: CredsSignin(
+                          text: 'Apply filter',
+                          color: Colors.white,
+                          bgcolor: blue,
+                          arrowColor: Colors.white,
+                          height: 60,
+                        ),
                       ),
                       const SizedBox(
                         height: 20,
                       ),
                       CredsSignin(
-                        showArrow: false,
+                        arrowColor: blue,
                         text: 'Clear filter',
                         color: blue,
                         bgcolor: Colors.white,
-                        height: 40,
+                        height: 60,
                       ),
                     ],
                   ),

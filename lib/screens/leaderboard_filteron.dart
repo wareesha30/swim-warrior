@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:swimwarrior/screens/profile_empty.dart';
 import 'package:swimwarrior/utils/colors.dart';
 import 'package:swimwarrior/widgets/bottom_nav.dart';
 import 'package:swimwarrior/widgets/swimmer_rank.dart';
 
-class LeaderBoard3 extends StatelessWidget {
-  const LeaderBoard3({super.key});
+class LeaderBoardFilterOn extends StatelessWidget {
+  const LeaderBoardFilterOn({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -116,10 +117,18 @@ class LeaderBoard3 extends StatelessWidget {
                         const SizedBox(
                           height: 34,
                         ),
-                        const SwimmerRank(
-                          prefix: '1',
-                          main: 'Andre Tacuyan',
-                          suffix: '0',
+                        InkWell(
+                          onTap: () => {
+                            Navigator.push(context,
+                                MaterialPageRoute(builder: (context) {
+                              return const ProfileEmpty();
+                            }))
+                          },
+                          child: const SwimmerRank(
+                            prefix: '1',
+                            main: 'Andre Tacuyan',
+                            suffix: '0',
+                          ),
                         ),
                         const SizedBox(
                           height: 28,

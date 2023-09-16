@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:swimwarrior/screens/phone_number.dart';
+import 'package:swimwarrior/utils/colors.dart';
 import 'package:swimwarrior/widgets/signin_button.dart';
 
 class SignUp extends StatelessWidget {
@@ -10,7 +12,7 @@ class SignUp extends StatelessWidget {
     return Scaffold(
       body: Stack(
         children: [
-          Positioned(
+          Positioned.fill(
             top: 0,
             bottom: 0,
             right: 0,
@@ -59,15 +61,23 @@ class SignUp extends StatelessWidget {
                 const SizedBox(
                   height: 24,
                 ),
-                const Signin(
-                  color: Color(0xFF242E7F),
-                  bgcolor: Colors.white,
-                  img: FaIcon(
-                    FontAwesomeIcons.phone,
-                    size: 25,
-                    color: Colors.black,
+                InkWell(
+                  onTap: () => {
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) {
+                      return const PhoneNumber();
+                    }))
+                  },
+                  child: Signin(
+                    color: const Color(0xFF242E7F),
+                    bgcolor: Colors.white,
+                    img: FaIcon(
+                      FontAwesomeIcons.phone,
+                      size: 20,
+                      color: blue,
+                    ),
+                    text: 'Sign in with phone number',
                   ),
-                  text: 'Sign in with phone number',
                 ),
                 const SizedBox(height: 58)
               ],

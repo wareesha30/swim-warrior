@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:swimwarrior/screens/swimmerstroke_empty.dart';
 import 'package:swimwarrior/utils/colors.dart';
 import 'package:swimwarrior/widgets/butterfly.dart';
-import 'package:swimwarrior/widgets/creds_signin_button.dart';
+import 'package:swimwarrior/widgets/xp_bar_static.dart';
 
-class Leaderboard4 extends StatelessWidget {
-  const Leaderboard4({super.key});
+class ProfileEmpty extends StatelessWidget {
+  const ProfileEmpty({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -12,8 +13,7 @@ class Leaderboard4 extends StatelessWidget {
         appBar: AppBar(
           centerTitle: true,
           backgroundColor: blue,
-          leading: const Icon(
-            Icons.arrow_back,
+          leading: const BackButton(
             color: Colors.white,
           ),
           title: const Column(
@@ -49,12 +49,12 @@ class Leaderboard4 extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       Container(
-                          width: 126,
-                          height: 126,
+                          width: 130,
+                          height: 130,
                           decoration: const BoxDecoration(
                               color: Colors.white, shape: BoxShape.circle),
                           child: Image.asset(
-                            'assets/images/Total_score_04-23.png',
+                            'assets/images/icon.png',
                             fit: BoxFit.cover,
                           )),
                       const SizedBox(
@@ -66,29 +66,23 @@ class Leaderboard4 extends StatelessWidget {
                           Text('Silver III',
                               style: TextStyle(
                                 color: Colors.white,
-                                fontSize: 18,
+                                fontSize: 14,
                                 fontWeight: FontWeight.w700,
                               )),
-                          Text('Division III',
-                              style: TextStyle(
-                                color: Colors.white,
-                                fontSize: 12,
-                                fontWeight: FontWeight.w400,
-                              )),
                           SizedBox(
-                            height: 5,
+                            height: 23,
                           ),
-                          Text('2918',
+                          Text('0',
                               style: TextStyle(
                                 color: Colors.white,
-                                fontSize: 18,
+                                fontSize: 14,
                                 fontWeight: FontWeight.w700,
                               )),
                           Text('Points',
                               textAlign: TextAlign.left,
                               style: TextStyle(
                                 color: Colors.white,
-                                fontSize: 12,
+                                fontSize: 8,
                                 fontWeight: FontWeight.w400,
                               )),
                         ],
@@ -96,19 +90,14 @@ class Leaderboard4 extends StatelessWidget {
                     ],
                   ),
                   const SizedBox(
-                    height: 25,
+                    height: 20,
                   ),
-                  CredsSignin(
-                      showArrow: false,
-                      height: 44,
-                      text: '0/1000 XP',
-                      color: blue,
-                      bgcolor: Colors.white)
+                  const BarStatic()
                 ],
               ),
             ),
             Positioned(
-                top: 250,
+                top: 255,
                 bottom: 0,
                 left: 0,
                 right: 0,
@@ -123,23 +112,49 @@ class Leaderboard4 extends StatelessWidget {
                           topRight: Radius.circular(50.0),
                         ),
                       )),
-                  child: const Column(
-                    crossAxisAlignment: CrossAxisAlignment.center,
-                    children: [
-                      Butterfly(text: 'Butterfly'),
-                      SizedBox(
-                        height: 24,
-                      ),
-                      Butterfly(text: 'Backstroke'),
-                      SizedBox(
-                        height: 24,
-                      ),
-                      Butterfly(text: 'Breaststroke'),
-                      SizedBox(
-                        height: 24,
-                      ),
-                      Butterfly(text: 'Freestyle')
-                    ],
+                  child: SingleChildScrollView(
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: [
+                        InkWell(
+                          onTap: () => {
+                            Navigator.push(context,
+                                MaterialPageRoute(builder: (context) {
+                              return const SwimmerStrokeEmpty();
+                            }))
+                          },
+                          child: const Butterfly(
+                            text: 'Butterfly',
+                            show: ConditionalImg.image1,
+                            showArrow: true,
+                          ),
+                        ),
+                        const SizedBox(
+                          height: 24,
+                        ),
+                        const Butterfly(
+                          text: 'Backstroke',
+                          show: ConditionalImg.image1,
+                          showArrow: true,
+                        ),
+                        const SizedBox(
+                          height: 24,
+                        ),
+                        const Butterfly(
+                          text: 'Breaststroke',
+                          show: ConditionalImg.image1,
+                          showArrow: true,
+                        ),
+                        const SizedBox(
+                          height: 24,
+                        ),
+                        const Butterfly(
+                          text: 'Freestyle',
+                          show: ConditionalImg.image1,
+                          showArrow: true,
+                        )
+                      ],
+                    ),
                   ),
                 )),
           ],

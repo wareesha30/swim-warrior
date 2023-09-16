@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:swimwarrior/screens/leaderboard_filter.dart';
 import 'package:swimwarrior/utils/colors.dart';
 import 'package:swimwarrior/widgets/bottom_nav.dart';
 import 'package:swimwarrior/widgets/swimmer_rank.dart';
@@ -39,9 +40,9 @@ class LeaderBoard1 extends StatelessWidget {
                       topRight: Radius.circular(50.0),
                     ),
                   ),
-                  child: const Column(
+                  child: Column(
                     children: [
-                      Row(
+                      const Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
                           Text(
@@ -73,55 +74,62 @@ class LeaderBoard1 extends StatelessWidget {
                           ),
                         ],
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 32,
                       ),
                       TextField(
                         decoration: InputDecoration(
-                            prefixIcon: Icon(Icons.search),
-                            suffixIcon: Icon(Icons.filter_list),
-                            border: UnderlineInputBorder(),
+                            prefixIcon: const Icon(Icons.search),
+                            suffixIcon: InkWell(
+                                onTap: () => {
+                                      Navigator.push(context,
+                                          MaterialPageRoute(builder: (context) {
+                                        return const LeaderBoardFilter();
+                                      }))
+                                    },
+                                child: const Icon(Icons.filter_list)),
+                            border: const UnderlineInputBorder(),
                             hintText: 'Search',
-                            hintStyle: TextStyle(
+                            hintStyle: const TextStyle(
                               color: Colors.black,
                               fontSize: 18,
                               fontFamily: 'SF Pro Display',
                               fontWeight: FontWeight.w400,
                             )),
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 34,
                       ),
-                      SwimmerRank(
+                      const SwimmerRank(
                         prefix: '1',
                         main: 'Andre Tacuyan',
                         suffix: '0',
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 28,
                       ),
-                      SwimmerRank(
+                      const SwimmerRank(
                         prefix: '2',
                         main: 'Lauren Higgs',
                         suffix: '0',
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 28,
                       ),
-                      SwimmerRank(
+                      const SwimmerRank(
                         prefix: '3',
                         main: 'Matt Smith',
                         suffix: '0',
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 28,
                       ),
-                      SwimmerRank(
+                      const SwimmerRank(
                         prefix: '4',
                         main: 'Thomas Meek',
                         suffix: '0',
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 221,
                       ),
                     ],

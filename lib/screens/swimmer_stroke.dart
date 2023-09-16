@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:swimwarrior/screens/leaderboard_6.dart';
 import 'package:swimwarrior/utils/colors.dart';
 import 'package:swimwarrior/widgets/butterfly.dart';
 
-class SwimmerStrokeEmpty extends StatelessWidget {
-  const SwimmerStrokeEmpty({super.key});
+class SwimmerStroke extends StatelessWidget {
+  const SwimmerStroke({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -61,50 +60,86 @@ class SwimmerStrokeEmpty extends StatelessWidget {
                           onTap: () => {
                             Navigator.push(context,
                                 MaterialPageRoute(builder: (context) {
-                              return const Leaderboard6();
+                              return const SwimmerStroke();
                             }))
                           },
-                          child: const Butterfly(
+                          child: Butterfly(
+                            secondaryText: 'Division I',
                             textSize: false,
                             txt: '25',
-                            bgcolor: false,
-                            text: 'Unranked',
+                            text: 'Diamond IV',
                             showArrow: false,
                             show: ConditionalImg.text,
+                            textColor: blue,
+                            replaceArrow: const Text(
+                              '0:13:42',
+                              style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 18,
+                                fontWeight: FontWeight.w400,
+                              ),
+                            ),
                           ),
                         ),
                         const SizedBox(
                           height: 24,
                         ),
-                        const Butterfly(
+                        Butterfly(
+                          secondaryText: 'Division I',
                           textSize: false,
                           txt: '50',
-                          bgcolor: false,
-                          text: 'Unranked',
+                          text: 'Diamond IV',
                           showArrow: false,
                           show: ConditionalImg.text,
+                          textColor: blue,
+                          replaceArrow: const Text(
+                            '0:13:42',
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 18,
+                              fontWeight: FontWeight.w400,
+                            ),
+                          ),
                         ),
                         const SizedBox(
                           height: 24,
                         ),
-                        const Butterfly(
+                        Butterfly(
+                          secondaryText: 'Division I',
                           textSize: false,
                           txt: '75',
-                          bgcolor: false,
-                          text: 'Unranked',
+                          text: 'Diamond IV',
                           showArrow: false,
                           show: ConditionalImg.text,
+                          textColor: blue,
+                          replaceArrow: const Text(
+                            '0:13:42',
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 18,
+                              fontWeight: FontWeight.w400,
+                            ),
+                          ),
                         ),
                         const SizedBox(
                           height: 24,
                         ),
-                        const Butterfly(
+                        Butterfly(
+                          secondaryText: 'Division I',
                           textSize: false,
                           txt: '100',
-                          bgcolor: false,
-                          text: 'Unranked',
+                          text: 'Diamond IV',
                           showArrow: false,
                           show: ConditionalImg.text,
+                          textColor: blue,
+                          replaceArrow: const Text(
+                            '0:13:42',
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 18,
+                              fontWeight: FontWeight.w400,
+                            ),
+                          ),
                         )
                       ],
                     ),
@@ -121,7 +156,7 @@ class SwimmerStrokeEmpty extends StatelessWidget {
                   decoration: const BoxDecoration(
                       color: Colors.white, shape: BoxShape.circle),
                   child: Image.asset(
-                    'assets/images/unranked.png',
+                    'assets/images/Diamond_Butterfly_women.png',
                   ),
                 )),
           ],

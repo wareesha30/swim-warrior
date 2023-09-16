@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:swimwarrior/screens/leaderboard_1.dart';
 import 'package:swimwarrior/utils/colors.dart';
 import 'package:swimwarrior/widgets/verification_code.dart';
 import '../widgets/creds_signin_button.dart';
@@ -45,10 +46,18 @@ class Verification extends StatelessWidget {
                       const SizedBox(
                         height: 240,
                       ),
-                      CredsSignin(
-                        text: 'Sign up',
-                        color: blue,
-                        bgcolor: Colors.white,
+                      InkWell(
+                        onTap: () => {
+                          Navigator.push(context,
+                              MaterialPageRoute(builder: (context) {
+                            return const LeaderBoard1();
+                          }))
+                        },
+                        child: CredsSignin(
+                          text: 'Sign up',
+                          color: blue,
+                          bgcolor: Colors.white,
+                        ),
                       ),
                       const SizedBox(
                         height: 58,

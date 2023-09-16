@@ -29,13 +29,12 @@ class CredsSignin extends StatelessWidget {
       decoration: BoxDecoration(
           color: bgcolor, borderRadius: BorderRadius.circular(50)),
       child: Row(
-        mainAxisAlignment: showArrow ?? true
-            ? MainAxisAlignment.spaceBetween
-            : MainAxisAlignment.center,
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           Text(
             text,
-            style: TextStyle(fontSize: 25, color: color),
+            style: TextStyle(
+                fontSize: 28, fontWeight: FontWeight.w400, color: color),
           ),
           showArrow ?? true
               ? Icon(Icons.arrow_forward, color: arrowColor ?? blue)
