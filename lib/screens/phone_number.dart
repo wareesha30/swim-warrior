@@ -31,13 +31,17 @@ class PhoneNumber extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
                     SizedBox(
-                      height: MediaQuery.of(context).size.height * 0.2,
+                      height: MediaQuery.of(context).size.height * 0.17,
                     ),
                     Image.asset('assets/images/Frame.png'),
                     Image.asset('assets/images/Logo.png'),
-                    const Spacer(),
+                    const SizedBox(
+                      height: 80,
+                    ),
                     const NameInput(),
-                    const Spacer(),
+                    const SizedBox(
+                      height: 240,
+                    ),
                     const ContinueButton(),
                     const SizedBox(
                       height: 58,
